@@ -30,7 +30,7 @@ export interface Notion_results {
 export default function index({ projects }: { projects: any }) {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen px-6  mb-10
+      className="flex flex-col items-center justify-center min-h-screen px-3 mb-10
     "
     >
       <Head>
@@ -42,7 +42,7 @@ export default function index({ projects }: { projects: any }) {
         총 프로젝트 :
         <span className="pl-4 text-blue-500">{projects.results.length}</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 m-6 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 m-4 ">
         {projects.results.map((aProject: Notion_results) => {
           return <ProjectItem key={aProject.id} data={aProject} />;
         })}

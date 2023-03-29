@@ -37,10 +37,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-{"sorts": [
-{
-"property": "이름",
-"direction": "descending"
-}
-]
-}
+head 수정하기 사이즈 변경하기
