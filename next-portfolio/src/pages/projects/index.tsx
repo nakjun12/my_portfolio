@@ -29,18 +29,25 @@ export interface Notion_results {
 
 export default function index({ projects }: { projects: any }) {
   return (
-    <>
+    <div
+      className="flex flex-col items-center justify-center min-h-screen px-6  mb-10
+    "
+    >
       <Head>
         <title>준황 프로젝트</title>
         <meta name="description" content="포트폴리오" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>총 프로젝트 : {projects.results.length}</h1>
-      {projects.results.map((aProject: Notion_results) => {
-        console.log(aProject);
-        return <ProjectItem key={aProject.id} data={aProject} />;
-      })}
-    </>
+      <h1 className="font-bold text-4xl sm:text-5xl">
+        총 프로젝트 :
+        <span className="pl-4 text-blue-500">{projects.results.length}</span>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 m-6 w-full">
+        {projects.results.map((aProject: Notion_results) => {
+          return <ProjectItem key={aProject.id} data={aProject} />;
+        })}
+      </div>
+    </div>
   );
 }
 
